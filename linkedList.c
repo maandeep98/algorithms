@@ -29,6 +29,8 @@ void pop() {
 
 int checkEmpty() { return !!head; }
 
+void getFirstNode() { printf("First node data value is %d",head->data); }
+
 int main() {
 
     // Populating the linked list
@@ -55,4 +57,7 @@ int main() {
     else {
         printf("Linked List is empty.\n");
     }
+
+    // get the first node data value of linked list
+    getFirstNode();
 }
