@@ -27,13 +27,32 @@ void pop() {
     head = ptr;
 }
 
+int checkEmpty() { return !!head; }
+
 int main() {
+
+    // Populating the linked list
     push(5);
     push(10);
+    push(15);
+    push(20);
+
+    // Deleting latest added node in linked list
+    pop();
+
+    // Printing nodes of linked list
     struct node *curr;
     curr = head;
     while(curr != NULL) {
         printf("%d\n",curr->data);
         curr = curr->next;
+    }
+
+    // Checking weather list is empty or not
+    if (checkEmpty() == 1) {
+        printf("Linked List is not empty.\n");
+    }
+    else {
+        printf("Linked List is empty.\n");
     }
 }
